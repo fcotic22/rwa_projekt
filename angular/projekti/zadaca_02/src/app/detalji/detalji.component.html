@@ -1,0 +1,47 @@
+<main>
+    <button id="prijava" (click)="prebaciNaPocetnu()">Prijavi se</button>
+    <figure>
+        <img [src]="'https://image.tmdb.org/t/p/original'+osoba?.profilna_slika" alt="{{osoba?.ime}}">
+    </figure>
+    <div id="tekst">
+        <h1>{{osoba?.ime}} {{osoba?.prezime}}</h1>
+        <p style="color:burlywood;">Poznat po: </p><p>{{osoba?.poznat_po}}</p>
+        <p style="color:burlywood;">Popularnost: </p><p>{{osoba?.popularnost}}</p>
+    </div>
+    <div id="osobe">
+        <figure class="osobe-grid" *ngFor="let slika of osobaSlike">
+            <img [src]="'https://image.tmdb.org/t/p/original'+slika" alt="{{osoba?.ime}}">
+        </figure>
+    </div>
+    <div id="filmovi">
+        <table>
+            <tr>
+                <th>Originalni naziv filma</th>
+                <th>Naziv filma</th>
+                <th>Originalni jezik</th>
+                <th>Popularnost</th>
+                <th>Slika postera</th>
+                <th>Datum izdavanja</th>
+                <th>Lik</th>
+            </tr>
+            <tr *ngFor="let film of prikazFilmovi">
+                <td (mouseover)="prikaziOpis(film)" (mouseout)="sakrijOpis()">
+                    {{film.original_title}}
+                    <div *ngIf="film == trenutniFilm" class="opis">
+                        <p>{{film.overview}}</p>
+                    </div>
+                </td>
+                <td>{{film.title}}</td>
+                <td>{{film.original_language}}</td>
+                <td>{{film.popularity}}</td>
+                <td><img [src]="'https://image.tmdb.org/t/p/original'+film.poster_path" alt="{{film.original_title}}"></td>
+                <td>{{film.release_date}}</td>
+                <td>{{film.character}}</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+    <button (click)="ucitajJos()" >Učitaj još filmova</button>
+    <button (click)="prebaciNaOsobe()">Nazad</button>
+    </div>
+</main>

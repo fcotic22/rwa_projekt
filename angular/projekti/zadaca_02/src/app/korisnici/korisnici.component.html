@@ -1,0 +1,47 @@
+
+    <main>
+     <button id="prijava" (click)="prebaciNaPocetnu()">Prijavi se</button>
+     <div id="korisnici">
+        <table>
+            <thead>
+                <tr>
+                    <th>Ime</th>
+                    <th>Prezime</th>
+                    <th>Korisnicko ime</th>
+                    <th>Adresa</th>
+                    <th>Datum rodjenja</th>
+                    <th>Spol</th>                    
+                    <th>Tip korisnika</th>
+                    <th>Obrisi</th>
+                    <th>Potvrdi</th>
+                    <th>Odbij</th>
+                    <th>Izbrisi pristup</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let korisnik of korisnici">
+                    <td>{{korisnik.ime}}</td>
+                    <td>{{korisnik.prezime}}</td>
+                    <td [ngStyle]="{'color': zahtjevi[korisnik.korime] ? 'green' : 'white'}">{{korisnik.korime}}</td>
+                    <td>{{korisnik.adresa}}</td>
+                    <td>{{korisnik.datum_rodjenja}}</td>
+                    <td>{{korisnik.spol}}</td>
+                    <td>{{korisnik.tip_korisnika_id}}</td>
+                    <td><button *ngIf="korisnik.korime!='admin'" (click)="obrisi(korisnik.korime)">Obrisi</button></td>
+                    <td><button *ngIf="korisnik.korime!='admin' && zahtjevi[korisnik.korime]" (click)="potvrdi(korisnik.korime)">Potvrdi</button></td>
+                    <td><button *ngIf="korisnik.korime!='admin' && zahtjevi[korisnik.korime]" (click)="odbij(korisnik.korime)">Odbij</button></td>
+                    <td><button *ngIf="korisnik.korime!='admin' && pristupi[korisnik.korime]" (click)="izbrisiPristup(korisnik.korime)">Izbrisi pristup</button></td>
+                </tr>
+            </tbody>
+            
+        </table>
+     </div>
+     
+     <div id="legenda">
+        <p>Legenda:</p>
+        <p>Korsničko ime korisnika koji su poslali zatjev je označeno zelenom bojom.</p>
+     </div>
+    
+    
+    </main>
+    <footer></footer>

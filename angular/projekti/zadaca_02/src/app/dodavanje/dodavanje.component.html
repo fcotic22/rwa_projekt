@@ -1,0 +1,29 @@
+<main>
+    <button id="prijava" (click)="prebaciNaPrijavu()">Prijavi se</button>
+    <input type="text" [(ngModel)]="ime" placeholder="Ime osobe">
+    <button (click)="trazi(ime)">Traži</button>
+
+    <div *ngIf="nadjeneOsobe.length > 0">
+        <h2>Osobe</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Ime i prezime</th>
+                    <th>Poznat po</th>
+                    <th>Popularnost</th>
+                    <th>Dodaj</th>
+                    <th>Obriši</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let osoba of nadjeneOsobe">
+                    <td>{{osoba.ime}} {{osoba.prezime}}</td>
+                    <td>{{osoba.poznat_po}}</td>
+                    <td>{{osoba.popularnost}}</td>
+                    <td><button id='dodaj_{{osoba.id}}' (click)="dodaj(osoba)">Dodaj</button></td>
+                    <td><button id="obrisi_{{osoba.id}}" (click)="obrisi(osoba.id)">Obriši</button></td>
+                </tr>
+        </table>
+    </div>
+    <p *ngIf="nadjeneOsobe.length==0 && prviPut">Nema rezultata!</p>
+</main>

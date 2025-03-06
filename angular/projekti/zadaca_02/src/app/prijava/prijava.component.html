@@ -1,0 +1,18 @@
+
+<main>
+    <form>
+        <label for="korime">Korisničko ime</label>
+        <input id="korime" name="korime" type="text" [readonly]="ukljucen"/>
+        <label for="lozinka">Lozinka</label>
+        <input id="lozinka" name="lozinka" type="password" [readonly]="ukljucen"/>
+        <label for="totp" *ngIf="ukljucen">TOTP</label>
+        <input id="totp" name="totp" type="text" *ngIf="ukljucen"/>
+        <input type="submit" value="Šalji" />
+    </form>
+    <p>Stranica za testiranje TOTP-a : https://piellardj.github.io/totp-generator/?secret=&digits=6&period=60&algorithm=SHA-512</p>
+    <p *ngIf="totp!=''">TOTP ključ za {{korime}} </p>
+    <p *ngIf="totp!=''">{{totp}}</p>
+
+    <p>korime: admin, lozinka: rwa</p>
+    <p>korime: obican, lozinka: rwa</p>
+</main>

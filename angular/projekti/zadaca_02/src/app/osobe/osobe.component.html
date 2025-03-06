@@ -1,0 +1,13 @@
+<main id="osobe">
+    <button id="prijava" (click)="prebaciNaPrijavu()">Prijavi se</button>
+    <figure class="osobe-grid" *ngFor="let osoba of prikazaneOsobe">
+        <img [src]="'https://image.tmdb.org/t/p/original'+osoba.profilna_slika" alt="{{osoba.ime}}"  (click)="prebaciNaDetalje(osoba.id)">
+        <figcaption>{{osoba.ime}} {{osoba.prezime}} <br>Poznat po: {{osoba.poznat_po}} </figcaption>
+    </figure>
+    
+    <select name="odabirStranice" id="odabir" (change)="zapisiOdabir($event)">
+        <option value="0">Odaberi broj osoba za prikaz</option>
+        <option *ngFor="let broj of brojOsoba" [value]="broj">{{broj}}</option>
+    </select>
+    <button id="btnDodavanje" (click)="prebaciNaDodavanje()" style="visibility: hidden;">Dodaj/obriši osobu</button>
+</main> 

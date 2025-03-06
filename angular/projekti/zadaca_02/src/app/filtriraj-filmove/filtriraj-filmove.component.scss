@@ -1,0 +1,38 @@
+#filtriraj {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-bottom: 0%;
+}
+
+#datumi-container {
+   margin-bottom: 20px;
+}
+
+#datumi {
+   display: flex;
+   justify-content: space-between;
+   gap: 20px;
+   width: 100%;
+   max-width: 500px;
+}
+
+.datum {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+#stranica {
+   margin-top: 20px;
+   text-align: center;
+}
+
+h1 {
+   margin-bottom: 0px;
+}
+
+input {
+   width: 150px; 
+   padding: 5px;
+}

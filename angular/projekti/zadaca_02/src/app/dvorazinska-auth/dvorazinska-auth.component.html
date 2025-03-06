@@ -1,0 +1,10 @@
+<main>
+    <button id="prijava" (click)="prebaciNaPrijavu()">Prijavi se</button>
+    <h1>Dvorazinska autentifikacija</h1>
+    <p *ngIf="podaci">Prijavljeni ste kao: ({{podaci.korime}})</p>
+
+    <button id="ukljuci" (click)="ukljuciAuth()" *ngIf="podaci && !ukljucena">Uključi 2FA za {{podaci.korime}}</button>
+    <button id="iskljuci" (click)="iskljuciAuth()" *ngIf="podaci && ukljucena">Isključi 2FA za {{podaci.korime}}</button>
+    <h3 *ngIf="podaci && ukljucena">TAJNI TOTP KLJUČ</h3> 
+    <p *ngIf="podaci && ukljucena">{{tajniKod}}</p>
+</main>

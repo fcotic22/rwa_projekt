@@ -1,0 +1,31 @@
+<main>
+    <button id="prijava"  (click)="prebaciNaPrijavu()">Prijavi se</button>
+    <form (submit)="posaljiRegistraciju($event)">
+        <label for="ime">Ime</label>
+        <input type="text" name="ime" id="ime" />
+        <br>
+        <label for="prezime">Prezime</label>
+        <input type="text" name="prezime" id="prezime" />
+        <br>
+        <label for="adresa">Adresa</label>
+        <input type="text" name="adresa" id="adresa" />
+        <br>
+        <label for="datum_rodjenja">Datum rođenja</label>
+        <input type="text" name="datum_rodjenja" id="datum_rodjenja" />
+        <br>
+        <label for="spol">Spol</label>
+        <input type="text" name="spol" id="spol" placeholder="Spol"/>
+        <br>
+        <label for="email">email</label>
+        <input type="email" name="email" id="email" />
+        <br>
+        <label for="lozinka">Lozinka</label>
+        <input type="password" name="lozinka" id="lozinka" />
+        <br>
+        <br>
+        <label for="korime">Korisničko ime</label>
+        <input type="text" name="korime" id="korime" />
+        <br>
+        <input type="submit" value="Registriraj" />
+    </form>
+</main>

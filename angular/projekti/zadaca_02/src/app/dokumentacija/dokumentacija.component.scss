@@ -1,0 +1,20 @@
+$zelena: green;
+$crvena: red;
+$crna: black;
+
+table {
+    border: 2px solid $crna;
+
+    td, th {
+        border: 1px solid $crna;
+        padding: 5px;
+    }
+}
+
+.napravljeno{
+    color: $zelena;
+}
+
+.nenapravljeno{
+    color: $crvena;
+}

@@ -1,0 +1,229 @@
+<main>
+    <button id="prijava" (click)="prebaciNaPrijavu()">Prijavi se</button>
+    <div class="podaci-o-autoru">
+        <h2>O autoru</h2>
+        <img [src]="putanja + 'fcotic22.png'" alt="Autorova slika" width="150">
+        <p>Ime - Franjo</p>
+        <p>Prezime - Čotić</p>
+        <p>Email - fcotic22{{ '@' }}foi.hr</p>
+        <p>Student 3. godine prediplomskog studija IPS na Fakultetu organizacije i informatike u Varaždin</p>
+    </div>
+
+    <div class="era-modeli">
+        <h2>ERA modeli</h2>
+        <p>Klikom na sliku otvara se originalna slika modela.</p>
+        <a [href]="putanja + 'ERA_model_fcotic22.png'">
+            <img [src]="putanja + 'ERA_model_fcotic22.png'" alt="ERA model 1" width="500" height="300">
+        </a>
+        <br>
+        <a [href]="putanja + 'ERA_korisnik.png'">
+            <img [src]="putanja + 'ERA_korisnik.png'" alt="ERA model 1" width="500" height="300">
+        </a>
+    </div>
+
+    <div class="tablice">
+        <h2>Pregled resursa, metoda i parametara REST servisa (Tablica 2)</h2>
+        <table>
+            <tr>
+                <th>Resurs</th>
+                <th>GET</th>
+                <th>POST</th>
+                <th>PUT</th>
+                <th>DELETE</th>
+            </tr>
+            <tr>
+                <td>servis/korisnici</td>
+                <td></td>
+                <td>NAPRAVLJENO</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>servis/korisnici/{{ '{' }}korime{{ '}' }}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>NAPRAVLJENO</td>
+            </tr>
+            <tr>
+                <td>servis/osoba?stranica=broj</td>
+                <td>NAPRAVLJENO</td>
+                <td>NAPRAVLJENO</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>servis/osoba/{{ '{' }}id{{ '}' }}</td>
+                <td>NAPRAVLJENO</td>
+                <td></td>
+                <td></td>
+                <td>NAPRAVLJENO</td>
+            </tr>
+            <tr>
+                <td>servis/osoba/{{ '{' }}id{{ '}' }}/film?stranica=broj</td>
+                <td>NAPRAVLJENO</td>
+                <td></td>
+                <td>NAPRAVLJENO</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>servis/film?stranica=broj&[datumOd=timestamp&datumDo=timestamp]</td>
+                <td>NAPRAVLJENO</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>servis/film/{{ '{' }}id{{ '}' }}</td>
+                <td>NAPRAVLJENO</td>
+                <td></td>
+                <td></td>
+                <td>NAPRAVLJENO</td>
+            </tr>
+        </table>
+
+        <h2>Pregled funkcionalnosti Web aplikacije po ulogama (Tablica 3)</h2>
+        <table>
+            <tr>
+                <th>Uloga</th>
+                <th>Stranica/e</th>
+                <th>Opis</th>
+            </tr>
+            <tr>
+                <td>Gost</td>
+                <td>Početna</td>
+                <td>NAPRAVLJENO</td>
+            </tr>
+            <tr>
+                <td>Gost</td>
+                <td>Dokumentacija</td>
+                <td>NAPRAVLJENO</td>
+            </tr>
+            <tr>
+                <td>Gost</td>
+                <td>Prijava, Odjava</td>
+                <td>NAPRAVLJENO</td>
+            </tr>
+            <tr>
+                <td>Gost</td>
+                <td>Registracija</td>
+                <td>NAPRAVLJENO</td>
+            </tr>
+            <tr>
+                <td>Korisnik</td>
+                <td>Početna</td>
+                <td>NAPRAVLJENO</td>
+            </tr>
+            <tr>
+                <td>Korisnik</td>
+                <td>Osobe</td>
+                <td>NAPRAVLJENO</td>
+            </tr>
+            <tr>
+                <td>Korisnik</td>
+                <td>Detalji</td>
+                <td>NAPRAVLJENO</td>
+            </tr>
+            <tr>
+                <td>Admin</td>
+                <td>Korisnici</td>
+                <td>NAPRAVLJENO</td>
+            </tr>
+            <tr>
+                <td>Admin</td>
+                <td>Dodavanje</td>
+                <td>NAPRAVLJENO</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="zadaci">
+        <h2>Zadaci</h2>
+        <ol>
+            <li>Ažurirati tablice s informacijama o napravljenim dijelovima servisa i aplikacije.</li>
+            <br>
+            <p style="color: green;">NAPRAVLJENO</p>
+            <br>
+            <li>Kreirati listu koraka s elementima opisa 2. zadaće koji su napravljeni.</li>
+            <br>
+            <p style="color: green;">NAPRAVLJENO</p>
+            <br>
+            <li>Ugraditi dokumentaciju unutar Angular aplikacije.</li>
+            <br>
+            <p style="color: green;">NAPRAVLJENO</p>
+            <br>
+            <li>Postoji package.json u posluzitelj direktoriju tako da se sa npm run pripremi pripreme svi
+                potrebni moduli i sa npm run servis pokrene naš poslužitelj servisa koji sve poslužuje na portu
+                12222 kada smo na localhost. U direktoriju angular isto tako postoji jedan
+                package.json, tsconfig.json i angular.json da se može pokrenuti angular projekt sa ng serve ako
+                bude ocjenivač htio nešto provjeriti.</li>
+            <br>
+            <p style="color: green;">NAPRAVLJENO</p>
+            <br>    
+            <li>Poslužitelj servisa treba poslužiti kompajliranu verziju Angular aplikacije na početnoj putanji (/).</li>
+            <br>
+            <p style="color: green;">NAPRAVLJENO</p>
+            <br>
+            <li>Izbrisati TMDB ključeve iz konfiguracijske datoteke prije predaje zadaće.</li>
+            <br>
+            <p style="color: green;">NAPRAVLJENO</p>
+            <br>
+            
+            <li>Prebaciti pozadinski dio web aplikacije u servis s putanjom /servis/app/{{ '{' }}resurs{{ '}' }}.</li>
+            <br>
+            <p style="color: green;">NAPRAVLJENO</p>
+            <br>
+            <li>Prebaciti klijentski dio aplikacije u Angular s TypeScript-om i SCSS-om.</li>
+            <br>
+            <p style="color: green;">NAPRAVLJENO</p>
+            <br>
+            <li>Klijentski dio aplikacije mora koristiti fetch zahtjeve preko vlastitog servisa. Nema direktnog slanja zahtjeva na TMDB API</li>
+            <br>
+            <p style="color: green;">NAPRAVLJENO</p>
+            <br>
+            <li>Čitati informacije o adresi i portu iz environment datoteke.</li>
+            <br>
+            <p style="color: green;">NAPRAVLJENO</p>
+            <br>
+            <li>Dizajn stranice prebaciti u Sass ili Scss sintaksu, dozvoljeno koristiti Angular Material.</li>
+            <br>
+            <p style="color: green;">NAPRAVLJENO - Nije korišten Angular Material</p>
+            <br>
+            <li>Dodati reCaptcha v3 na obrasce registracija i prijava.</li>
+            <br>
+            <p style="color: green;">NAPRAVLJENO - Stavljeno da ne mora prođi za prijavu</p>
+            <br>
+            <li>Dodati stranicu za aktiviranje dvorazinske autentifikacije s tajnim ključem</li>
+            <br>
+            <p style="color: green;">NAPRAVLJENO</p>
+            <br>
+            <li>Doraditi prijavu za dvorazinsku autentifikaciju s TOTP kada je uključen za korisnika.</li>
+            <br>
+            <p style="color: green;">NAPRAVLJENO</p>
+            <br>
+            <li>Inicijalno postaviti korisnike iz svake uloge bez TOTP i navesti podatke na stranici prijava.</li>
+            <br>
+            <p style="color: green;">NAPRAVLJENO</p>
+            <br>
+            <li>Dodati stranicu za filtriranje filmova prema datumu (opcionalan jedan datum ili oba) s straničenjem od 20 zapisa.</li>
+            <br>
+            <p style="color: green;">NAPRAVLJENO</p>
+            <br>
+            <li>ZA DODATNE BODOVE - Dodati mogućnost postavljanja vlastitih slika za filmove i prikazivati ih u galeriji.</li>
+            <br>
+            <p style="color: red;">NIJE NAPRAVLJENO</p>
+            <br>
+            <br>
+        </ol>
+    </div>
+
+    <div class="dodatne-informacije">
+        <h2>Dodatne informacije</h2>
+       
+        <h2>Nenapravljeni dijelovi i greške -</h2>
+        <p>Straničenje za filmove osobe nije napravljeno na način da se dobavljaju filmovi osobe sa prve stranice, nego se dobavljaju svi filmovi i zatim se slice-om smanjuju na 20 filmova, inače je bilo ostavljeno da se svi filmovi osobe spremaju u bazi, ali s obzirom  da neki glumci imaju ogromnu količinu filmova vraćala bi se greška 413 - Payload too large, iz tog razloga je ograničeno da se u bazu dodaju samo prvih 20 filmova osobe (1. stranica)</p>
+        <p>Navigacija zna biti nekonzistentna, npr odjava sa neke stranice mogu ostati poveznice koje vide samo prijavljeni  (kada odemo na njih baci alert i nemamo pristup)</p>
+        <p>Prilikom testiranja totpa cijelo vrijeme sam koristio stranicu: https://www.verifyr.com/en/otp/check#totp. Međutim u jednom trenu samo mi je počelo davati neispravne totp kodove i nisam nikako mogao dokučiti zašto, provjerio sam parametre za generiranje i sve je bilo u redu, prebacivanjem na stranicu: https://piellardj.github.io/totp-generator/?secret=&digits=6&period=60&algorithm=SHA-512 sve je nastavilo funkcionirati normalno sa TOTP-om</p>
+        <p>Recaptcha je postavljena da i ako ne prođe da se prijava može nastaviti iz razloga što bi nerijetko dobivao grešku TIMEOUT-a, nakon dobivanja te greške i odjave prijava bi mi se počela neobično ponašati (totp ne prolazi ispravan i sl) pa sam sklonio da je recaptcha obavezna da prođe za prijavu</p>
+    </div>
+</main>

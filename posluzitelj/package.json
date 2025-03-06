@@ -1,0 +1,32 @@
+{
+	"name": "zadaca_01",
+	"version": "1.0.0",
+	"description": "",
+	"main": "servis.js",
+	"type": "module",
+	"scripts": {
+		"pripremi": "npm link --save --package-lock false express  express-session cookie-parser better-sqlite3 cors jsonwebtoken nodemailer base32-encoding totp-generator",
+		"copy-files": "copyfiles -u 1 src/**/*.html src/**/*.css src/**/*.jpg 'src/**/*.js' build/",
+		"clean": "rm -r build/*",
+		"compile": "tsc --watch false",
+		"servis": "node build/servis/servis.js podaci/konfiguracija.csv",
+		"servis2": "nodemon build/servis/servis.js podaci/konfiguracija.csv",
+		"aplikacija": "node build/aplikacija/aplikacija.js podaci/konfiguracija.csv",
+		"start": "npm run clean && npm run compile && npm run copy-files && npm run servis",
+		"start2": "npm run clean && npm run compile && npm run copy-files && nodemon run servis",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Franjo Čotić",
+	"license": "ISC",
+	"dependencies": {
+		"base32-encoding": "file:../../../../../../../AppData/Roaming/npm/node_modules/base32-encoding",
+		"better-sqlite3": "file:../../../../../../../AppData/Roaming/npm/node_modules/better-sqlite3",
+		"cookie-parser": "file:../../../../../../../AppData/Roaming/npm/node_modules/cookie-parser",
+		"cors": "file:../../../../../../../AppData/Roaming/npm/node_modules/cors",
+		"express": "file:../../../../../../../AppData/Roaming/npm/node_modules/express",
+		"express-session": "file:../../../../../../../AppData/Roaming/npm/node_modules/express-session",
+		"jsonwebtoken": "file:../../../../../../../AppData/Roaming/npm/node_modules/jsonwebtoken",
+		"nodemailer": "file:../../../../../../../AppData/Roaming/npm/node_modules/nodemailer",
+		"totp-generator": "file:../../../../../../../AppData/Roaming/npm/node_modules/totp-generator"
+	}
+}

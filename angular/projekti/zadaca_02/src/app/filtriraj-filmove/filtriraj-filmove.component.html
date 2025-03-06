@@ -1,0 +1,40 @@
+<main id="filtriraj">
+    <h1>Filtriraj filmove</h1>
+    <p>Filtriraj filmove prema datumima izdavanja</p>
+
+    <div id="datumi-container">
+        <div id="datumi">
+            <div class="datum">
+                <label for="datumOd">Datum od: </label>
+                <input name="datumOd" type="date" [(ngModel)]="datumOd">
+            </div>
+            <div class="datum">
+                <label for="datumDo">Datum do: </label>
+                <input name="datumDo" type="date" [(ngModel)]="datumDo">
+            </div>
+        </div>
+    </div>
+
+    <div id="stranica">
+        <label for="stranica">Stranica: </label>
+        <input name="stranica" type="number" [(ngModel)]="stranica">
+    </div>
+    <button (click)="filtriraj()">Filtriraj</button>
+    
+    <div id="filmovi" *ngIf="filmovi.length > 0">
+        <table border="1">
+            <tr>
+                <th>Naziv filma</th>
+                <th>Originalni jezik</th>
+                <th>Popularnost</th>
+                <th>Datum izdavanja</th>
+            </tr>
+            <tr *ngFor="let film of filmovi">
+                <td>{{film.naslov}}</td>
+                <td>{{film.jezik}}</td>
+                <td>{{film.popularnost}}</td>
+                <td>{{film.datum_izdavanja}}</td>
+            </tr>
+        </table>
+    </div>
+</main>
