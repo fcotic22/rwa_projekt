@@ -12,6 +12,6 @@ Za pokretanje aplikacije na localhost:12222 potrebno je: <br>
 
 1. Skinuti zip projekta na svoje računalo
 2. Unzipati projekt
-3. U bash terminalu naredbom "cd posluzitelj" se prebaciti u direktorij poslužitelj
+3. U bash terminalu naredbom "cd rwa_projekt-main/posluzitelj" se prebaciti u direktorij poslužitelj
 4. Pokrenuti npm skriptu pripremi uz pomoć naredbe "npm run pripremi"
 5. Pokrenuti npm skriptu servis koja pokreće server uz pomoć naredbe "npm run servis"
